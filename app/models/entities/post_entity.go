@@ -7,4 +7,5 @@ type PostEntity struct {
 	Content    string
 	Image      string
 	Created_at string
+	Updated_at string
 }

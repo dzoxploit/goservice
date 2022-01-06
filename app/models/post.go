@@ -2,7 +2,6 @@ package models
 
 import (
 	"database/sql"
-	"fmt"
 	"go_service/app/models/entities"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -20,7 +19,7 @@ func (postModel PostModel) FindPost(slug string) entities.PostEntity {
 
 	var post = entities.PostEntity{}
 
-	rows,err := db.QueryRow(`
+	db.QueryRow(`
 				SELECT id,
 				title, 
 				content, 
@@ -34,14 +33,8 @@ func (postModel PostModel) FindPost(slug string) entities.PostEntity {
 						&post.Image,
 						&post.Created_at,
 					)
-
-	if err != nil {
-		fmt.Sprint()
-	}
-
-	defer rows.Close()
 	
-
+	defer db.Close()
 	
 	return post
 }
