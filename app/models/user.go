@@ -3,6 +3,8 @@ package models
 import (
 	"database/sql"
 	"go_service/app/models/entities"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 type UserModel struct {
