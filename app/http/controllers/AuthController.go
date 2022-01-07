@@ -42,6 +42,7 @@ func GetUser(c echo.Context) error {
 		Id:    user.Id_user,
 		Name:  user.Name,
 		Email: user.Email,
+		
 	}
 	return c.JSON(http.StatusOK, userForm)
 }

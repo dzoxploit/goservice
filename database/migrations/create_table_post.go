@@ -23,7 +23,7 @@ func Post() {
 		"id bigint PRIMARY KEY NOT NULL AUTO_INCREMENT",
 		"title varchar(100) UNIQUE",
 		"content text",
-		"image varchar(100)",
+		"image varchar(100) NULL",
 		"created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP",
 		"updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
 	}

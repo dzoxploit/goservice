@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go_framework/database/migrations"
+	"go_service/database/migrations"
 	"log"
 
 	_ "github.com/go-sql-driver/mysql"
