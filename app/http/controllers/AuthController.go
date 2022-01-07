@@ -64,7 +64,7 @@ func DeleteUser(c echo.Context) error {
 }
 
 func SaveUserByJson(c echo.Context) error {
-	u := new(model.User)
+	u := new(models.User)
 	if err := c.Bind(u); err != nil {
 		return err
 	}

@@ -17,7 +17,7 @@ services:
       context: .
     volumes:
       - ./:/go/src/go_service
-    image: goframework
+    image: goservice
     container_name: go_service
     restart: on-failure
     ports:
