@@ -7,7 +7,7 @@ import (
 
 func Post() {
 	
-	db := database.Connect()
+	db := database.ConnectMigration()
 	
 	tableName := "posts"
 

@@ -8,7 +8,7 @@ import (
 
 func User() {
 
-	db := database.Connect()
+	db := database.ConnectMigration()
 	tableName := "users"
 	// drop if exists
 	qcheck := "DROP TABLE IF EXISTS %s"
